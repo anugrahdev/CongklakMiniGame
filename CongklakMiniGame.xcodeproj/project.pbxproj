@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9CD6817E2706F9DD0009FFF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD6817D2706F9DD0009FFF5 /* AppDelegate.swift */; };
+		9CD681802706F9DD0009FFF5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD6817F2706F9DD0009FFF5 /* SceneDelegate.swift */; };
+		9CD681822706F9DD0009FFF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD681812706F9DD0009FFF5 /* ViewController.swift */; };
+		9CD681852706F9DD0009FFF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CD681832706F9DD0009FFF5 /* Main.storyboard */; };
+		9CD681882706F9DD0009FFF5 /* CongklakMiniGame.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9CD681862706F9DD0009FFF5 /* CongklakMiniGame.xcdatamodeld */; };
+		9CD6818A2706F9DE0009FFF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CD681892706F9DE0009FFF5 /* Assets.xcassets */; };
+		9CD6818D2706F9DE0009FFF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CD6818B2706F9DE0009FFF5 /* LaunchScreen.storyboard */; };
+		9CD681982706F9DE0009FFF5 /* CongklakMiniGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD681972706F9DE0009FFF5 /* CongklakMiniGameTests.swift */; };
+		9CD681A32706F9DF0009FFF5 /* CongklakMiniGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD681A22706F9DF0009FFF5 /* CongklakMiniGameUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9CD681942706F9DE0009FFF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CD681722706F9DD0009FFF5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9CD681792706F9DD0009FFF5;
+			remoteInfo = CongklakMiniGame;
+		};
+		9CD6819F2706F9DF0009FFF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CD681722706F9DD0009FFF5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9CD681792706F9DD0009FFF5;
+			remoteInfo = CongklakMiniGame;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9CD6817A2706F9DD0009FFF5 /* CongklakMiniGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CongklakMiniGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CD6817D2706F9DD0009FFF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9CD6817F2706F9DD0009FFF5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9CD681812706F9DD0009FFF5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9CD681842706F9DD0009FFF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9CD681872706F9DD0009FFF5 /* CongklakMiniGame.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CongklakMiniGame.xcdatamodel; sourceTree = "<group>"; };
+		9CD681892706F9DE0009FFF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9CD6818C2706F9DE0009FFF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9CD6818E2706F9DE0009FFF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CD681932706F9DE0009FFF5 /* CongklakMiniGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CongklakMiniGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CD681972706F9DE0009FFF5 /* CongklakMiniGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongklakMiniGameTests.swift; sourceTree = "<group>"; };
+		9CD681992706F9DE0009FFF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CD6819E2706F9DF0009FFF5 /* CongklakMiniGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CongklakMiniGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CD681A22706F9DF0009FFF5 /* CongklakMiniGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongklakMiniGameUITests.swift; sourceTree = "<group>"; };
+		9CD681A42706F9DF0009FFF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9CD681772706F9DD0009FFF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CD681902706F9DE0009FFF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CD6819B2706F9DF0009FFF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9CD681712706F9DD0009FFF5 = {
+			isa = PBXGroup;
+			children = (
+				9CD6817C2706F9DD0009FFF5 /* CongklakMiniGame */,
+				9CD681962706F9DE0009FFF5 /* CongklakMiniGameTests */,
+				9CD681A12706F9DF0009FFF5 /* CongklakMiniGameUITests */,
+				9CD6817B2706F9DD0009FFF5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9CD6817B2706F9DD0009FFF5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9CD6817A2706F9DD0009FFF5 /* CongklakMiniGame.app */,
+				9CD681932706F9DE0009FFF5 /* CongklakMiniGameTests.xctest */,
+				9CD6819E2706F9DF0009FFF5 /* CongklakMiniGameUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9CD6817C2706F9DD0009FFF5 /* CongklakMiniGame */ = {
+			isa = PBXGroup;
+			children = (
+				9CD6817D2706F9DD0009FFF5 /* AppDelegate.swift */,
+				9CD6817F2706F9DD0009FFF5 /* SceneDelegate.swift */,
+				9CD681812706F9DD0009FFF5 /* ViewController.swift */,
+				9CD681832706F9DD0009FFF5 /* Main.storyboard */,
+				9CD681892706F9DE0009FFF5 /* Assets.xcassets */,
+				9CD6818B2706F9DE0009FFF5 /* LaunchScreen.storyboard */,
+				9CD6818E2706F9DE0009FFF5 /* Info.plist */,
+				9CD681862706F9DD0009FFF5 /* CongklakMiniGame.xcdatamodeld */,
+			);
+			path = CongklakMiniGame;
+			sourceTree = "<group>";
+		};
+		9CD681962706F9DE0009FFF5 /* CongklakMiniGameTests */ = {
+			isa = PBXGroup;
+			children = (
+				9CD681972706F9DE0009FFF5 /* CongklakMiniGameTests.swift */,
+				9CD681992706F9DE0009FFF5 /* Info.plist */,
+			);
+			path = CongklakMiniGameTests;
+			sourceTree = "<group>";
+		};
+		9CD681A12706F9DF0009FFF5 /* CongklakMiniGameUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9CD681A22706F9DF0009FFF5 /* CongklakMiniGameUITests.swift */,
+				9CD681A42706F9DF0009FFF5 /* Info.plist */,
+			);
+			path = CongklakMiniGameUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9CD681792706F9DD0009FFF5 /* CongklakMiniGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CD681A72706F9DF0009FFF5 /* Build configuration list for PBXNativeTarget "CongklakMiniGame" */;
+			buildPhases = (
+				9CD681762706F9DD0009FFF5 /* Sources */,
+				9CD681772706F9DD0009FFF5 /* Frameworks */,
+				9CD681782706F9DD0009FFF5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CongklakMiniGame;
+			productName = CongklakMiniGame;
+			productReference = 9CD6817A2706F9DD0009FFF5 /* CongklakMiniGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9CD681922706F9DE0009FFF5 /* CongklakMiniGameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CD681AA2706F9DF0009FFF5 /* Build configuration list for PBXNativeTarget "CongklakMiniGameTests" */;
+			buildPhases = (
+				9CD6818F2706F9DE0009FFF5 /* Sources */,
+				9CD681902706F9DE0009FFF5 /* Frameworks */,
+				9CD681912706F9DE0009FFF5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9CD681952706F9DE0009FFF5 /* PBXTargetDependency */,
+			);
+			name = CongklakMiniGameTests;
+			productName = CongklakMiniGameTests;
+			productReference = 9CD681932706F9DE0009FFF5 /* CongklakMiniGameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9CD6819D2706F9DF0009FFF5 /* CongklakMiniGameUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CD681AD2706F9DF0009FFF5 /* Build configuration list for PBXNativeTarget "CongklakMiniGameUITests" */;
+			buildPhases = (
+				9CD6819A2706F9DF0009FFF5 /* Sources */,
+				9CD6819B2706F9DF0009FFF5 /* Frameworks */,
+				9CD6819C2706F9DF0009FFF5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9CD681A02706F9DF0009FFF5 /* PBXTargetDependency */,
+			);
+			name = CongklakMiniGameUITests;
+			productName = CongklakMiniGameUITests;
+			productReference = 9CD6819E2706F9DF0009FFF5 /* CongklakMiniGameUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9CD681722706F9DD0009FFF5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					9CD681792706F9DD0009FFF5 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					9CD681922706F9DE0009FFF5 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 9CD681792706F9DD0009FFF5;
+					};
+					9CD6819D2706F9DF0009FFF5 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 9CD681792706F9DD0009FFF5;
+					};
+				};
+			};
+			buildConfigurationList = 9CD681752706F9DD0009FFF5 /* Build configuration list for PBXProject "CongklakMiniGame" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9CD681712706F9DD0009FFF5;
+			productRefGroup = 9CD6817B2706F9DD0009FFF5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9CD681792706F9DD0009FFF5 /* CongklakMiniGame */,
+				9CD681922706F9DE0009FFF5 /* CongklakMiniGameTests */,
+				9CD6819D2706F9DF0009FFF5 /* CongklakMiniGameUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9CD681782706F9DD0009FFF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CD6818D2706F9DE0009FFF5 /* LaunchScreen.storyboard in Resources */,
+				9CD6818A2706F9DE0009FFF5 /* Assets.xcassets in Resources */,
+				9CD681852706F9DD0009FFF5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CD681912706F9DE0009FFF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CD6819C2706F9DF0009FFF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9CD681762706F9DD0009FFF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CD681822706F9DD0009FFF5 /* ViewController.swift in Sources */,
+				9CD6817E2706F9DD0009FFF5 /* AppDelegate.swift in Sources */,
+				9CD681882706F9DD0009FFF5 /* CongklakMiniGame.xcdatamodeld in Sources */,
+				9CD681802706F9DD0009FFF5 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CD6818F2706F9DE0009FFF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CD681982706F9DE0009FFF5 /* CongklakMiniGameTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CD6819A2706F9DF0009FFF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CD681A32706F9DF0009FFF5 /* CongklakMiniGameUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9CD681952706F9DE0009FFF5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9CD681792706F9DD0009FFF5 /* CongklakMiniGame */;
+			targetProxy = 9CD681942706F9DE0009FFF5 /* PBXContainerItemProxy */;
+		};
+		9CD681A02706F9DF0009FFF5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9CD681792706F9DD0009FFF5 /* CongklakMiniGame */;
+			targetProxy = 9CD6819F2706F9DF0009FFF5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9CD681832706F9DD0009FFF5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9CD681842706F9DD0009FFF5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9CD6818B2706F9DE0009FFF5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9CD6818C2706F9DE0009FFF5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9CD681A52706F9DF0009FFF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9CD681A62706F9DF0009FFF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9CD681A82706F9DF0009FFF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3VL5UA77DJ;
+				INFOPLIST_FILE = CongklakMiniGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.anugrahdev.CongklakMiniGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9CD681A92706F9DF0009FFF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3VL5UA77DJ;
+				INFOPLIST_FILE = CongklakMiniGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.anugrahdev.CongklakMiniGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9CD681AB2706F9DF0009FFF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3VL5UA77DJ;
+				INFOPLIST_FILE = CongklakMiniGameTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.anugrahdev.CongklakMiniGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CongklakMiniGame.app/CongklakMiniGame";
+			};
+			name = Debug;
+		};
+		9CD681AC2706F9DF0009FFF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3VL5UA77DJ;
+				INFOPLIST_FILE = CongklakMiniGameTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.anugrahdev.CongklakMiniGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CongklakMiniGame.app/CongklakMiniGame";
+			};
+			name = Release;
+		};
+		9CD681AE2706F9DF0009FFF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3VL5UA77DJ;
+				INFOPLIST_FILE = CongklakMiniGameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.anugrahdev.CongklakMiniGameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CongklakMiniGame;
+			};
+			name = Debug;
+		};
+		9CD681AF2706F9DF0009FFF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3VL5UA77DJ;
+				INFOPLIST_FILE = CongklakMiniGameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.anugrahdev.CongklakMiniGameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CongklakMiniGame;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9CD681752706F9DD0009FFF5 /* Build configuration list for PBXProject "CongklakMiniGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CD681A52706F9DF0009FFF5 /* Debug */,
+				9CD681A62706F9DF0009FFF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CD681A72706F9DF0009FFF5 /* Build configuration list for PBXNativeTarget "CongklakMiniGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CD681A82706F9DF0009FFF5 /* Debug */,
+				9CD681A92706F9DF0009FFF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CD681AA2706F9DF0009FFF5 /* Build configuration list for PBXNativeTarget "CongklakMiniGameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CD681AB2706F9DF0009FFF5 /* Debug */,
+				9CD681AC2706F9DF0009FFF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CD681AD2706F9DF0009FFF5 /* Build configuration list for PBXNativeTarget "CongklakMiniGameUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CD681AE2706F9DF0009FFF5 /* Debug */,
+				9CD681AF2706F9DF0009FFF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9CD681862706F9DD0009FFF5 /* CongklakMiniGame.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9CD681872706F9DD0009FFF5 /* CongklakMiniGame.xcdatamodel */,
+			);
+			currentVersion = 9CD681872706F9DD0009FFF5 /* CongklakMiniGame.xcdatamodel */;
+			path = CongklakMiniGame.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 9CD681722706F9DD0009FFF5 /* Project object */;
+}
