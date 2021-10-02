@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import RxSwift
 
 class BaseView: UIView {
+    
+    public var disposeBag = DisposeBag()
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,4 +29,14 @@ class BaseView: UIView {
     func onViewDidDisAppear() {}
     func onViewWillLayoutSubViews() {}
     func onViewDidLayoutSubViews() {}
+    static let getDeviceWidth = UIScreen.main.bounds.width
+    static let getDeviceHeight = UIScreen.main.bounds.height
+    
+    func getDeviceWidth() -> CGFloat {
+        return UIScreen.main.bounds.width
+    }
+    
+    func getDeviceHeight() -> CGFloat {
+        return UIScreen.main.bounds.height
+    }
 }

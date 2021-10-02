@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import RxSwift
 
 class BaseViewController<T: BaseView> : UIViewController {
     
+    public var disposeBag = DisposeBag()
     var vSpinner : UIView?
     
     func showAlert(title: String, message: String) {

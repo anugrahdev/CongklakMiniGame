@@ -7,6 +7,8 @@ target 'CongklakMiniGame' do
 
   # Pods for CongklakMiniGame
   pod 'SnapKit', '~> 5.0.0'
+  pod 'RxSwift'
+  pod 'RxCocoa'
 
   target 'CongklakMiniGameTests' do
     inherit! :search_paths

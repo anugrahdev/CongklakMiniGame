@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         
-        let viewController = HomeGameViewController()
+        let viewController = HomeGameController()
         
         window.rootViewController = viewController
         self.window = window
