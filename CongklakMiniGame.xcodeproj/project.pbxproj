@@ -3,13 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		089A74ED7F52F89DC6A41AA2 /* Pods_CongklakMiniGameTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77DAFC0E5AB9B4B72D1DE3CE /* Pods_CongklakMiniGameTests.framework */; };
+		3EB2267C381BF44FAFD14234 /* Pods_CongklakMiniGame_CongklakMiniGameUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF16EFAF01A58E159548B627 /* Pods_CongklakMiniGame_CongklakMiniGameUITests.framework */; };
 		9C470412270728C3006C9D1A /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C470411270728C3006C9D1A /* UIView+Extensions.swift */; };
 		9C47041A27072C14006C9D1A /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C47041927072C14006C9D1A /* Player.swift */; };
-		9CAA2BD927073E6F0015D1C1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9CAA2BD827073E6F0015D1C1 /* SnapKit */; };
+		9CAA2BDB2707443B0015D1C1 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAA2BDA2707443B0015D1C1 /* Double+Extensions.swift */; };
 		9CD6817E2706F9DD0009FFF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD6817D2706F9DD0009FFF5 /* AppDelegate.swift */; };
 		9CD681802706F9DD0009FFF5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD6817F2706F9DD0009FFF5 /* SceneDelegate.swift */; };
 		9CD681882706F9DD0009FFF5 /* CongklakMiniGame.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9CD681862706F9DD0009FFF5 /* CongklakMiniGame.xcdatamodeld */; };
@@ -19,6 +21,11 @@
 		9CD681A32706F9DF0009FFF5 /* CongklakMiniGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD681A22706F9DF0009FFF5 /* CongklakMiniGameUITests.swift */; };
 		9CD681B62707032A0009FFF5 /* HomeGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD681B52707032A0009FFF5 /* HomeGameViewController.swift */; };
 		9CD681B8270703E90009FFF5 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD681B7270703E90009FFF5 /* UIViewController+Extensions.swift */; };
+		9CEB4B7D27082DA200F52363 /* CongklakGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEB4B7C27082DA200F52363 /* CongklakGame.swift */; };
+		9CEB4B7F270839AE00F52363 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEB4B7E270839AE00F52363 /* BaseViewController.swift */; };
+		9CEB4B8127083AC000F52363 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEB4B8027083AC000F52363 /* BaseView.swift */; };
+		9CEB4B8327083B7400F52363 /* HomeGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEB4B8227083B7400F52363 /* HomeGameView.swift */; };
+		A490F16CD45BBCC76AE30632 /* Pods_CongklakMiniGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9D507D940ABDCD9E062DBA /* Pods_CongklakMiniGame.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +46,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A55F84000B2E85CB54E76C5 /* Pods-CongklakMiniGame-CongklakMiniGameUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CongklakMiniGame-CongklakMiniGameUITests.release.xcconfig"; path = "Target Support Files/Pods-CongklakMiniGame-CongklakMiniGameUITests/Pods-CongklakMiniGame-CongklakMiniGameUITests.release.xcconfig"; sourceTree = "<group>"; };
+		365D570855835B2C2AD84C23 /* Pods-CongklakMiniGame-CongklakMiniGameUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CongklakMiniGame-CongklakMiniGameUITests.debug.xcconfig"; path = "Target Support Files/Pods-CongklakMiniGame-CongklakMiniGameUITests/Pods-CongklakMiniGame-CongklakMiniGameUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4858D86DB01827617B13A0A8 /* Pods-CongklakMiniGameTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CongklakMiniGameTests.release.xcconfig"; path = "Target Support Files/Pods-CongklakMiniGameTests/Pods-CongklakMiniGameTests.release.xcconfig"; sourceTree = "<group>"; };
+		77DAFC0E5AB9B4B72D1DE3CE /* Pods_CongklakMiniGameTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CongklakMiniGameTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C9D507D940ABDCD9E062DBA /* Pods_CongklakMiniGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CongklakMiniGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C470411270728C3006C9D1A /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		9C47041927072C14006C9D1A /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		9CAA2BDA2707443B0015D1C1 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		9CD6817A2706F9DD0009FFF5 /* CongklakMiniGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CongklakMiniGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CD6817D2706F9DD0009FFF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CD6817F2706F9DD0009FFF5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +69,14 @@
 		9CD681A42706F9DF0009FFF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CD681B52707032A0009FFF5 /* HomeGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGameViewController.swift; sourceTree = "<group>"; };
 		9CD681B7270703E90009FFF5 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		9CEB4B7C27082DA200F52363 /* CongklakGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongklakGame.swift; sourceTree = "<group>"; };
+		9CEB4B7E270839AE00F52363 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		9CEB4B8027083AC000F52363 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		9CEB4B8227083B7400F52363 /* HomeGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGameView.swift; sourceTree = "<group>"; };
+		AF16EFAF01A58E159548B627 /* Pods_CongklakMiniGame_CongklakMiniGameUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CongklakMiniGame_CongklakMiniGameUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8933905C7B51BC28C323D0E /* Pods-CongklakMiniGameTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CongklakMiniGameTests.debug.xcconfig"; path = "Target Support Files/Pods-CongklakMiniGameTests/Pods-CongklakMiniGameTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C97B80CE294BBC80881393A6 /* Pods-CongklakMiniGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CongklakMiniGame.debug.xcconfig"; path = "Target Support Files/Pods-CongklakMiniGame/Pods-CongklakMiniGame.debug.xcconfig"; sourceTree = "<group>"; };
+		CBA0C8926B5270AA9824ED11 /* Pods-CongklakMiniGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CongklakMiniGame.release.xcconfig"; path = "Target Support Files/Pods-CongklakMiniGame/Pods-CongklakMiniGame.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CAA2BD927073E6F0015D1C1 /* SnapKit in Frameworks */,
+				A490F16CD45BBCC76AE30632 /* Pods_CongklakMiniGame.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				089A74ED7F52F89DC6A41AA2 /* Pods_CongklakMiniGameTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,15 +100,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EB2267C381BF44FAFD14234 /* Pods_CongklakMiniGame_CongklakMiniGameUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4066315F9D9131F612ED665A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C97B80CE294BBC80881393A6 /* Pods-CongklakMiniGame.debug.xcconfig */,
+				CBA0C8926B5270AA9824ED11 /* Pods-CongklakMiniGame.release.xcconfig */,
+				365D570855835B2C2AD84C23 /* Pods-CongklakMiniGame-CongklakMiniGameUITests.debug.xcconfig */,
+				0A55F84000B2E85CB54E76C5 /* Pods-CongklakMiniGame-CongklakMiniGameUITests.release.xcconfig */,
+				C8933905C7B51BC28C323D0E /* Pods-CongklakMiniGameTests.debug.xcconfig */,
+				4858D86DB01827617B13A0A8 /* Pods-CongklakMiniGameTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		9C47041727072B51006C9D1A /* Game Logic */ = {
 			isa = PBXGroup;
 			children = (
+				9CEB4B7C27082DA200F52363 /* CongklakGame.swift */,
 			);
 			path = "Game Logic";
 			sourceTree = "<group>";
@@ -106,6 +144,8 @@
 				9CD681962706F9DE0009FFF5 /* CongklakMiniGameTests */,
 				9CD681A12706F9DF0009FFF5 /* CongklakMiniGameUITests */,
 				9CD6817B2706F9DD0009FFF5 /* Products */,
+				4066315F9D9131F612ED665A /* Pods */,
+				A02B7CB202DC016C2352C31F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,6 +196,8 @@
 		9CD681B0270702A40009FFF5 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				9CEB4B7E270839AE00F52363 /* BaseViewController.swift */,
+				9CEB4B8027083AC000F52363 /* BaseView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -165,6 +207,7 @@
 			children = (
 				9CD681B7270703E90009FFF5 /* UIViewController+Extensions.swift */,
 				9C470411270728C3006C9D1A /* UIView+Extensions.swift */,
+				9CAA2BDA2707443B0015D1C1 /* Double+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -173,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				9CD681B52707032A0009FFF5 /* HomeGameViewController.swift */,
+				9CEB4B8227083B7400F52363 /* HomeGameView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -195,6 +239,16 @@
 			path = Resoures;
 			sourceTree = "<group>";
 		};
+		A02B7CB202DC016C2352C31F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C9D507D940ABDCD9E062DBA /* Pods_CongklakMiniGame.framework */,
+				AF16EFAF01A58E159548B627 /* Pods_CongklakMiniGame_CongklakMiniGameUITests.framework */,
+				77DAFC0E5AB9B4B72D1DE3CE /* Pods_CongklakMiniGameTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -202,18 +256,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9CD681A72706F9DF0009FFF5 /* Build configuration list for PBXNativeTarget "CongklakMiniGame" */;
 			buildPhases = (
+				B715355C0DFC4D767F0962A8 /* [CP] Check Pods Manifest.lock */,
 				9CD681762706F9DD0009FFF5 /* Sources */,
 				9CD681772706F9DD0009FFF5 /* Frameworks */,
 				9CD681782706F9DD0009FFF5 /* Resources */,
+				745152C0F3B8F922D6F1E370 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = CongklakMiniGame;
-			packageProductDependencies = (
-				9CAA2BD827073E6F0015D1C1 /* SnapKit */,
-			);
 			productName = CongklakMiniGame;
 			productReference = 9CD6817A2706F9DD0009FFF5 /* CongklakMiniGame.app */;
 			productType = "com.apple.product-type.application";
@@ -222,6 +275,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9CD681AA2706F9DF0009FFF5 /* Build configuration list for PBXNativeTarget "CongklakMiniGameTests" */;
 			buildPhases = (
+				3353220E76FC646FE4350674 /* [CP] Check Pods Manifest.lock */,
 				9CD6818F2706F9DE0009FFF5 /* Sources */,
 				9CD681902706F9DE0009FFF5 /* Frameworks */,
 				9CD681912706F9DE0009FFF5 /* Resources */,
@@ -240,9 +294,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9CD681AD2706F9DF0009FFF5 /* Build configuration list for PBXNativeTarget "CongklakMiniGameUITests" */;
 			buildPhases = (
+				75611736F36DF31805C40E6B /* [CP] Check Pods Manifest.lock */,
 				9CD6819A2706F9DF0009FFF5 /* Sources */,
 				9CD6819B2706F9DF0009FFF5 /* Frameworks */,
 				9CD6819C2706F9DF0009FFF5 /* Resources */,
+				10DE9702EF4104626CF8CC98 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -285,9 +341,6 @@
 				Base,
 			);
 			mainGroup = 9CD681712706F9DD0009FFF5;
-			packageReferences = (
-				9CAA2BD727073E6F0015D1C1 /* XCRemoteSwiftPackageReference "SnapKit" */,
-			);
 			productRefGroup = 9CD6817B2706F9DD0009FFF5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -325,17 +378,125 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		10DE9702EF4104626CF8CC98 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CongklakMiniGame-CongklakMiniGameUITests/Pods-CongklakMiniGame-CongklakMiniGameUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CongklakMiniGame-CongklakMiniGameUITests/Pods-CongklakMiniGame-CongklakMiniGameUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CongklakMiniGame-CongklakMiniGameUITests/Pods-CongklakMiniGame-CongklakMiniGameUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3353220E76FC646FE4350674 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CongklakMiniGameTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		745152C0F3B8F922D6F1E370 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CongklakMiniGame/Pods-CongklakMiniGame-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CongklakMiniGame/Pods-CongklakMiniGame-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CongklakMiniGame/Pods-CongklakMiniGame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75611736F36DF31805C40E6B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CongklakMiniGame-CongklakMiniGameUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B715355C0DFC4D767F0962A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CongklakMiniGame-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9CD681762706F9DD0009FFF5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CAA2BDB2707443B0015D1C1 /* Double+Extensions.swift in Sources */,
 				9C470412270728C3006C9D1A /* UIView+Extensions.swift in Sources */,
 				9CD6817E2706F9DD0009FFF5 /* AppDelegate.swift in Sources */,
+				9CEB4B8327083B7400F52363 /* HomeGameView.swift in Sources */,
 				9CD681B62707032A0009FFF5 /* HomeGameViewController.swift in Sources */,
+				9CEB4B7F270839AE00F52363 /* BaseViewController.swift in Sources */,
 				9CD681B8270703E90009FFF5 /* UIViewController+Extensions.swift in Sources */,
 				9C47041A27072C14006C9D1A /* Player.swift in Sources */,
 				9CD681882706F9DD0009FFF5 /* CongklakMiniGame.xcdatamodeld in Sources */,
+				9CEB4B7D27082DA200F52363 /* CongklakGame.swift in Sources */,
+				9CEB4B8127083AC000F52363 /* BaseView.swift in Sources */,
 				9CD681802706F9DD0009FFF5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,6 +662,7 @@
 		};
 		9CD681A82706F9DF0009FFF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C97B80CE294BBC80881393A6 /* Pods-CongklakMiniGame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -520,6 +682,7 @@
 		};
 		9CD681A92706F9DF0009FFF5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBA0C8926B5270AA9824ED11 /* Pods-CongklakMiniGame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -539,6 +702,7 @@
 		};
 		9CD681AB2706F9DF0009FFF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8933905C7B51BC28C323D0E /* Pods-CongklakMiniGameTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -561,6 +725,7 @@
 		};
 		9CD681AC2706F9DF0009FFF5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4858D86DB01827617B13A0A8 /* Pods-CongklakMiniGameTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -583,6 +748,7 @@
 		};
 		9CD681AE2706F9DF0009FFF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 365D570855835B2C2AD84C23 /* Pods-CongklakMiniGame-CongklakMiniGameUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -603,6 +769,7 @@
 		};
 		9CD681AF2706F9DF0009FFF5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A55F84000B2E85CB54E76C5 /* Pods-CongklakMiniGame-CongklakMiniGameUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -661,25 +828,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		9CAA2BD727073E6F0015D1C1 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		9CAA2BD827073E6F0015D1C1 /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9CAA2BD727073E6F0015D1C1 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		9CD681862706F9DD0009FFF5 /* CongklakMiniGame.xcdatamodeld */ = {

@@ -8,6 +8,6 @@
 import Foundation
 
 enum Player: String {
-    case Player_One
-    case Player_Two
+    case PlayerBlack = "Player Black (P1)"
+    case PlayerWhite = "Player White (P2)"
 }
