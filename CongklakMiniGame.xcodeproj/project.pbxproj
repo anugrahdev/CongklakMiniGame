@@ -21,7 +21,6 @@
 		9CD681A32706F9DF0009FFF5 /* CongklakMiniGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD681A22706F9DF0009FFF5 /* CongklakMiniGameUITests.swift */; };
 		9CD681B62707032A0009FFF5 /* HomeGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD681B52707032A0009FFF5 /* HomeGameController.swift */; };
 		9CD681B8270703E90009FFF5 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD681B7270703E90009FFF5 /* UIViewController+Extensions.swift */; };
-		9CEB4B7D27082DA200F52363 /* CongklakGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEB4B7C27082DA200F52363 /* CongklakGame.swift */; };
 		9CEB4B7F270839AE00F52363 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEB4B7E270839AE00F52363 /* BaseViewController.swift */; };
 		9CEB4B8127083AC000F52363 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEB4B8027083AC000F52363 /* BaseView.swift */; };
 		9CEB4B8327083B7400F52363 /* HomeGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEB4B8227083B7400F52363 /* HomeGameView.swift */; };
@@ -70,7 +69,6 @@
 		9CD681A42706F9DF0009FFF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CD681B52707032A0009FFF5 /* HomeGameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGameController.swift; sourceTree = "<group>"; };
 		9CD681B7270703E90009FFF5 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
-		9CEB4B7C27082DA200F52363 /* CongklakGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongklakGame.swift; sourceTree = "<group>"; };
 		9CEB4B7E270839AE00F52363 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9CEB4B8027083AC000F52363 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		9CEB4B8227083B7400F52363 /* HomeGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGameView.swift; sourceTree = "<group>"; };
@@ -125,7 +123,6 @@
 		9C47041727072B51006C9D1A /* Game Logic */ = {
 			isa = PBXGroup;
 			children = (
-				9CEB4B7C27082DA200F52363 /* CongklakGame.swift */,
 			);
 			path = "Game Logic";
 			sourceTree = "<group>";
@@ -498,7 +495,6 @@
 				9C47041A27072C14006C9D1A /* Player.swift in Sources */,
 				9CD681882706F9DD0009FFF5 /* CongklakMiniGame.xcdatamodeld in Sources */,
 				9CEB4B852708678B00F52363 /* GameInstructionController.swift in Sources */,
-				9CEB4B7D27082DA200F52363 /* CongklakGame.swift in Sources */,
 				9CEB4B8127083AC000F52363 /* BaseView.swift in Sources */,
 				9CD681802706F9DD0009FFF5 /* SceneDelegate.swift in Sources */,
 			);

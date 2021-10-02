@@ -44,7 +44,7 @@ class BaseViewController<T: BaseView> : UIViewController {
         }
     }
     
-    public var screenView: T {
+    public var contentView: T {
         return view as! T
     }
     
@@ -55,37 +55,37 @@ class BaseViewController<T: BaseView> : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        screenView.onViewDidLoad()
+        contentView.onViewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        screenView.onViewWillAppear()
+        contentView.onViewWillAppear()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        screenView.onViewDidAppear()
+        contentView.onViewDidAppear()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        screenView.onViewWillDisAppear()
+        contentView.onViewWillDisAppear()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        screenView.onViewDidDisAppear()
+        contentView.onViewDidDisAppear()
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        screenView.onViewWillLayoutSubViews()
+        contentView.onViewWillLayoutSubViews()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        screenView.onViewDidLayoutSubViews()
+        contentView.onViewDidLayoutSubViews()
     }
     
 }

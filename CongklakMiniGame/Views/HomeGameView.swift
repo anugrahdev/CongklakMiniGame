@@ -23,8 +23,6 @@ class HomeGameView: BaseView {
     
     weak var delegate: HomeGameViewDelegate?
     var gamePlayed = PublishSubject<Bool>()
-
-   
     
     lazy var buttonRestart: UIButton = {
         let button = UIButton()
@@ -78,9 +76,42 @@ class HomeGameView: BaseView {
         return label
     }()
     
+    lazy var buttonPlayerOneStoreHouse: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .black
+        button.isEnabled = false
+        button.layer.cornerRadius = (getDeviceWidth() * 0.120)/2
+        button.alpha = 0.3
+        return button
+    }()
+    
+    lazy var buttonPlayerTwoStoreHouse: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .white
+        button.isEnabled = false
+        button.layer.cornerRadius = (getDeviceWidth() * 0.120)/2
+        button.alpha = 0.3
+        button.setTitleColor(.black, for: .normal)
+        return button
+    }()
+    
+    lazy var stackPlayerOneHole: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .horizontal
+        stack.distribution = .equalSpacing
+        return stack
+    }()
+    
+    lazy var stackPlayerTwoHole: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .horizontal
+        stack.distribution = .equalSpacing
+        return stack
+    }()
+    
     var currentPlayer: Player!
     var gameHoles = [Int]()
-    var buttonsHoles = [UIButton]()
+    var buttonsHoles = [UIButton](repeating: UIButton(), count: 16)
     var labels = [UILabel]()
     
     override func setViews() {
@@ -90,6 +121,59 @@ class HomeGameView: BaseView {
         addSubview(buttonPlayerToss)
         addSubview(buttonPlayerOne)
         addSubview(buttonPlayerTwo)
+        addSubview(stackPlayerOneHole)
+        addSubview(stackPlayerTwoHole)
+        addSubview(buttonPlayerOneStoreHouse)
+        addSubview(buttonPlayerTwoStoreHouse)
+        
+        buttonPlayerOneStoreHouse.tag = 7
+        buttonPlayerTwoStoreHouse.tag = 15
+        
+        buttonsHoles[buttonPlayerOneStoreHouse.tag] = buttonPlayerOneStoreHouse
+        buttonsHoles[buttonPlayerTwoStoreHouse.tag] = buttonPlayerTwoStoreHouse
+        
+        for playerOneHoleIndex in (0...6).reversed() {
+            let buttonPlayerOneHole: UIButton = {
+                let button = UIButton()
+                button.backgroundColor = .black
+                button.isEnabled = false
+                button.layer.cornerRadius = (getDeviceWidth() * 0.075)/2
+                button.addTarget(self, action: #selector(pickHole), for: .touchUpInside)
+                button.alpha = 0.3
+                return button
+            }()
+            
+            buttonPlayerOneHole.snp.makeConstraints { make in
+                make.width.height.equalTo(getDeviceWidth() * 0.07)
+            }
+            
+            buttonPlayerOneHole.tag = playerOneHoleIndex
+            buttonsHoles[buttonPlayerOneHole.tag] = buttonPlayerOneHole
+            stackPlayerOneHole.addArrangedSubview(buttonPlayerOneHole)
+        }
+        
+        for playerTwoHoleIndex in 8...14 {
+            let buttonPlayerTwoHole: UIButton = {
+                let button = UIButton()
+                button.backgroundColor = .white
+                button.isEnabled = false
+                button.setTitleColor(.black, for: .normal)
+                button.layer.cornerRadius = (getDeviceWidth() * 0.075)/2
+                button.addTarget(self, action: #selector(pickHole), for: .touchUpInside)
+                button.alpha = 0.3
+                return button
+            }()
+            
+            buttonPlayerTwoHole.snp.makeConstraints { make in
+                make.width.height.equalTo(getDeviceWidth() * 0.07)
+            }
+            buttonPlayerTwoHole.tag = playerTwoHoleIndex
+            buttonsHoles[buttonPlayerTwoHole.tag] = buttonPlayerTwoHole
+            stackPlayerTwoHole.addArrangedSubview(buttonPlayerTwoHole)
+        }
+        
+        
+        
         backgroundColor = UIColor(patternImage: UIImage(named: "wood")!)
     }
     
@@ -127,10 +211,35 @@ class HomeGameView: BaseView {
             make.centerY.equalTo(buttonPlayerTwo)
             make.height.width.equalTo(getDeviceWidth()*0.040)
         }
+        
+        buttonPlayerOneStoreHouse.snp.makeConstraints { make in
+            make.left.equalToSuperview().inset(getDeviceWidth() * 0.05)
+            make.centerY.equalToSuperview()
+            make.height.width.equalTo(getDeviceWidth() * 0.120)
+        }
+        
+        stackPlayerOneHole.snp.makeConstraints { make in
+            make.left.equalTo(buttonPlayerOneStoreHouse.snp.right).inset(10)
+            make.top.equalTo(buttonPlayerOneStoreHouse.snp.bottom).inset(-10)
+            make.right.equalTo(buttonPlayerTwoStoreHouse.snp.left).inset(-10)
+        }
+        
+        buttonPlayerTwoStoreHouse.snp.makeConstraints { make in
+            make.right.equalToSuperview().inset((getDeviceWidth() * 0.05))
+            make.centerY.equalToSuperview()
+            make.height.width.equalTo(getDeviceWidth() * 0.120)
+        }
+        
+        stackPlayerTwoHole.snp.makeConstraints { make in
+            make.left.equalTo(buttonPlayerOneStoreHouse.snp.right).inset(10)
+            make.bottom.equalTo(buttonPlayerTwoStoreHouse.snp.top).inset(-10)
+            make.right.equalTo(buttonPlayerTwoStoreHouse.snp.left).inset(-10)
+        }
+        
     }
     
     override func onViewDidLoad() {
-        generateHoles()
+//        generateHoles()
         
         bindAndObserveView()
     }
@@ -177,69 +286,11 @@ class HomeGameView: BaseView {
         
     }
     
-    func generateHoles() {
-        for i in 0..<gameHoles.count {
-            makeGameHomeButton(tag: i)
-        }
-    }
-    
     func lockButton() {
         for button in buttonsHoles {
             button.isEnabled = false
             button.alpha = 0.3
         }
-    }
-    
-    func makeGameHomeButton(tag: Int) {
-        
-        let holeSize = getDeviceWidth() * 0.075
-        let storeHouseSize = getDeviceWidth() * 0.120
-
-        let holeButton: UIButton = {
-            let button = UIButton()
-            button.layer.cornerRadius = (holeSize)/2
-            button.backgroundColor = .black
-            button.isEnabled = false
-            button.addTarget(self, action: #selector(pickHole), for: .touchUpInside)
-            button.frame = CGRect(x: 0, y: 0, width: getDeviceWidth() * 0.075, height: getDeviceWidth() * 0.08)
-            button.alpha = 0.3
-            return button
-        }()
-        
-        let player1Y = getDeviceHeight()/2 + 80
-        let player1X = getDeviceWidth()/2 - 300
-        
-        let player2Y = getDeviceHeight()/2 - 80
-        let player2X = getDeviceWidth()/2 - 300
-        
-        let space = CGFloat(75.0)
-        
-        if tag == 7 {
-            holeButton.frame = CGRect(x: 0, y: 0, width: storeHouseSize, height: storeHouseSize)
-            holeButton.layer.cornerRadius = storeHouseSize/2
-            holeButton.center = CGPoint(x: player1X, y: getDeviceHeight()/2)
-        }
-        else if tag == 15 {
-            holeButton.frame = CGRect(x: 0, y: 0, width: storeHouseSize, height: storeHouseSize)
-            holeButton.layer.cornerRadius = storeHouseSize/2
-            holeButton.backgroundColor = .white
-            holeButton.setTitleColor(.black, for: .normal)
-            holeButton.center = CGPoint(x: player2X + 600.0, y: getDeviceHeight()/2)
-        }
-        if tag < 7 {
-            holeButton.center = CGPoint(x: (CGFloat(7-tag)*CGFloat(space) + player1X), y: player1Y)
-        }
-        else if tag > 7, tag < 15 {
-            holeButton.backgroundColor = .white
-            holeButton.setTitleColor(.black, for: .normal)
-            holeButton.center = CGPoint(x: player2X + CGFloat(tag-7)*space, y: player2Y)
-        }
-        
-        holeButton.setTitle("\(gameHoles[tag])", for: .normal)
-        holeButton.tag = tag
-        buttonsHoles.append(holeButton)
-        
-        addSubview(holeButton)
     }
     
     
