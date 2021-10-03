@@ -61,5 +61,16 @@ extension HomeGameController {
         }
         return index
     }
+    
+    func switchTurn() {
+        if contentView.currentPlayer == .PlayerBlack {
+            contentView.currentPlayer = .PlayerWhite
+        } else if contentView.currentPlayer == .PlayerWhite {
+            contentView.currentPlayer = .PlayerBlack
+        }
+        totalSteps = 0
+        contentView.lockButton()
+        contentView.labelPlayerTurn.text = "\(contentView.currentPlayer.rawValue) turn"
+    }
 
 }
