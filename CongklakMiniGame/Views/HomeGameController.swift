@@ -7,18 +7,12 @@
 
 import SnapKit
 import UIKit
+import RxCocoa
+import RxSwift
 
 class HomeGameController: BaseViewController<HomeGameView> {
     
-    var seedsInHand = Int()
-    var timer: Timer?
-    var previousIndex: Int!
-    var totalSteps = 0
-    var gotTheWinner = false
-    var isNgacang = false
-    var isGameOver = false
-    var ngacangs = [Int]()
-    var ngacangPlayer: Player!
+    var gamePlayed = BehaviorSubject<Bool>(value: false)
     
     var holes: [Int] = [] {
         didSet {
@@ -26,17 +20,31 @@ class HomeGameController: BaseViewController<HomeGameView> {
         }
     }
     
+    var seedsInHand = Int()
+    var timer: Timer?
+    var previousIndex: Int!
+    var totalSteps = 0
+    var ngacangs = [Int]()
+    var ngacangPlayer: Player!
+    
+    var gotTheWinner = false
+    var isNgacang = false
+    var isGameOver = false
+    
     override func viewDidLoad() {
         fillHoles()
         super.viewDidLoad()
         
-        contentView.gamePlayed
+        self.gamePlayed
             .asObservable()
             .subscribe(onNext: { [weak self] isPlayed in
                 self?.contentView.buttonPlayerOne.isEnabled = !isPlayed
                 self?.contentView.buttonPlayerTwo.isEnabled = !isPlayed
                 self?.contentView.buttonPlayerToss.isEnabled = !isPlayed
                 self?.contentView.buttonRestart.isEnabled = isPlayed
+                if !isPlayed {
+                    self?.contentView.labelPlayerTurn.text = "Select who play first"
+                }
             }).disposed(by: disposeBag)
         
         for i in 0...15 {
@@ -47,24 +55,31 @@ class HomeGameController: BaseViewController<HomeGameView> {
     }
     
     func fillHoles() {
-        holes = Array(repeating: 7, count: 16)
-        holes[7] = 0
-        holes[15] = 0
+        holes = [Int]()
+        for i in 0...15 {
+            if i == 7 || i == 15{
+                holes.append(0)
+            } else {
+                holes.append(7)
+            }
+        }
     }
     
     func pickPlayer() {
 
-        let players = [Player.PlayerBlack, Player.PlayerWhite]
-        let getPlayer = players.randomElement()
+        let getPlayer = [Player.PlayerBlack, Player.PlayerWhite].randomElement()
         
         self.contentView.labelPlayerTurn.text = "\(String(describing: getPlayer?.rawValue ?? "")) turn to play"
         contentView.currentPlayer = getPlayer
-        self.contentView.gamePlayed.onNext(true)
+        self.gamePlayed.onNext(true)
+        unlockButton()
     }
     
     func pickSelectedPlayer(_ player: Player) {
         self.contentView.labelPlayerTurn.text = "\(player.rawValue) turn to play"
         contentView.currentPlayer = player
+        unlockButton()
+        self.gamePlayed.onNext(true)
     }
     
     func isEmptyHole(index: Int) {
@@ -111,14 +126,14 @@ class HomeGameController: BaseViewController<HomeGameView> {
     
     func unlockButton() {
         if contentView.currentPlayer == .PlayerBlack {
-            for i in 0...7 {
-                if i<7 {
+            for i in 0...6 {
+                if i < 7 {
                     contentView.buttonsHoles[i].isEnabled = true
                 }
                 contentView.buttonsHoles[i].alpha = 1
             }
         } else {
-            for i in 8...15 {
+            for i in 8...14 {
                 if i<15 {
                     contentView.buttonsHoles[i].isEnabled = true
                 }
@@ -133,17 +148,8 @@ class HomeGameController: BaseViewController<HomeGameView> {
         }
     }
     
-    
     func restart() {
         seedsInHand = 0
-        
-        contentView.buttonRestart.alpha = 0.3
-        contentView.gamePlayed.onNext(false)
-        
-        contentView.buttonPlayerToss.alpha = 1
-        contentView.gamePlayed.onNext(true)
-        
-        
         fillHoles()
         for i in 0...15 {
             contentView.buttonsHoles[i].isEnabled = false
@@ -157,15 +163,13 @@ class HomeGameController: BaseViewController<HomeGameView> {
                 contentView.buttonsHoles[i].backgroundColor = .white
             }
         }
-        
-        contentView.labelPlayerTurn.text = "Select who play first"
-        
+                
         totalSteps = 0
         gotTheWinner = false
         isNgacang = false
         isGameOver = false
         ngacangs = []
-        self.contentView.gamePlayed.onNext(true)
+        self.gamePlayed.onNext(false)
         
     }
     
@@ -175,6 +179,7 @@ class HomeGameController: BaseViewController<HomeGameView> {
 extension HomeGameController: HomeGameViewDelegate {
     func diSelectPlayerTapped(_ player: Player) {
         self.pickSelectedPlayer(player)
+        gamePlayed.onNext(true)
     }
     
     func didGameQuestionTapped() {
@@ -194,12 +199,14 @@ extension HomeGameController: HomeGameViewDelegate {
             self.restart()
             self.contentView.labelPlayerTurn.text = "\(self.contentView.currentPlayer.rawValue) turn"
             self.unlockButton()
-            self.contentView.gamePlayed.onNext(true)
+            self.gamePlayed.onNext(true)
         }
+        gamePlayed.onNext(true)
     }
     
     func didRestartTapped() {
         self.restart()
+        gamePlayed.onNext(false)
     }
     
 }

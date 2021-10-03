@@ -22,7 +22,6 @@ protocol HomeGameViewDelegate: AnyObject {
 class HomeGameView: BaseView {
     
     weak var delegate: HomeGameViewDelegate?
-    var gamePlayed = PublishSubject<Bool>()
     
     lazy var buttonRestart: UIButton = {
         let button = UIButton()
@@ -71,7 +70,6 @@ class HomeGameView: BaseView {
     
     lazy var labelPlayerTurn: UILabel = {
         let label = UILabel()
-        label.text = "Select who play first"
         label.textAlignment = .center
         return label
     }()
@@ -256,14 +254,12 @@ class HomeGameView: BaseView {
             .rx
             .tap.bind { [unowned self] in
                 delegate?.didRestartTapped()
-                gamePlayed.onNext(false)
             }.disposed(by: disposeBag)
         
         buttonPlayerToss
             .rx
             .tap.bind { [unowned self] in
                 buttonRestart.alpha = 1
-                gamePlayed.onNext(true)
                 delegate?.didDecideTapped()
             }.disposed(by: disposeBag)
         
@@ -271,7 +267,6 @@ class HomeGameView: BaseView {
             .rx
             .tap.bind { [unowned self] in
                 buttonRestart.alpha = 1
-                gamePlayed.onNext(true)
                 delegate?.diSelectPlayerTapped(Player.PlayerBlack)
             }.disposed(by: disposeBag)
         
@@ -279,7 +274,6 @@ class HomeGameView: BaseView {
             .rx
             .tap.bind { [unowned self] in
                 buttonRestart.alpha = 1
-                gamePlayed.onNext(true)
                 delegate?.diSelectPlayerTapped(Player.PlayerWhite)
             }.disposed(by: disposeBag)
         
