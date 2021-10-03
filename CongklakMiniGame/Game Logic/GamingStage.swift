@@ -31,6 +31,7 @@ extension HomeGameController {
             holes[index] = holes[index] + 1
             totalSteps = 0
             contentView.labelPlayerTurn.text = "Seeds in hands : \(seedsInHand)"
+            winningCondition()
             if !isGameOver {
                 DispatchQueue.main.asyncAfter(deadline: .now()+0.3) {
                     self.contentView.labelPlayerTurn.text = "\(self.contentView.currentPlayer.rawValue) turn"
@@ -50,8 +51,8 @@ extension HomeGameController {
                         seedsInHand = seedsInHand - 1
                         holes[index] = holes[index] + 1
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3){
-                            self.unlockButton()
                             self.switchPlayerTurn()
+                            self.unlockButton()
                         }
                     }
                 } else {
@@ -63,9 +64,10 @@ extension HomeGameController {
                 holes[index] = holes[index] + 1
                 shot(index: index)
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3){
-                    self.unlockButton()
                     self.switchPlayerTurn()
+                    self.unlockButton()
                 }
+                winningCondition()
                 timer?.invalidate()
             }
         }

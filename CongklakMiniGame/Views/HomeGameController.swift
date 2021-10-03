@@ -215,6 +215,28 @@ class HomeGameController: BaseViewController<HomeGameView> {
         
     }
     
+    func winningCondition() {
+        if holes[0] == 0 && holes[1] == 0 && holes[2] == 0 && holes[3] == 0 && holes[4] == 0 && holes[5] == 0 && holes[6] == 0 {
+            contentView.labelPlayerTurn.text = "CONGRATULATION! PLAYER 2 WIN THE GAME!"
+            contentView.currentPlayer = .PlayerWhite
+            gotTheWinner = true
+            for i in 8...14 {
+                holes[15] += holes[i]
+                holes[i] = 0
+            }
+            isAnyRemainingSeeds(storeHouse: 15, smallestIndex: 8)
+        } else if holes[8] == 0 && holes[9] == 0 && holes[10] == 0 && holes[11] == 0 && holes[12] == 0 && holes[13] == 0 && holes[14] == 0 {
+            contentView.labelPlayerTurn.text = "CONGRATULATION! PLAYER 1 WIN THE GAME!"
+            contentView.currentPlayer = .PlayerBlack
+            gotTheWinner = true
+            for i in 0...6 {
+                holes[7] += holes[i]
+                holes[i] = 0
+            }
+            isAnyRemainingSeeds(storeHouse: 7, smallestIndex: 0)
+        }
+    }
+    
     
 }
 
