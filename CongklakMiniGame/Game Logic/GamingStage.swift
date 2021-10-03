@@ -50,8 +50,8 @@ extension HomeGameController {
                         seedsInHand = seedsInHand - 1
                         holes[index] = holes[index] + 1
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3){
-                            self.switchTurn()
                             self.unlockButton()
+                            self.switchPlayerTurn()
                         }
                     }
                 } else {
@@ -63,8 +63,8 @@ extension HomeGameController {
                 holes[index] = holes[index] + 1
                 shot(index: index)
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3){
-                    self.switchTurn()
                     self.unlockButton()
+                    self.switchPlayerTurn()
                 }
                 timer?.invalidate()
             }
@@ -88,7 +88,7 @@ extension HomeGameController {
         return index
     }
     
-    func switchTurn() {
+    func switchPlayerTurn() {
         if contentView.currentPlayer == .PlayerBlack {
             contentView.currentPlayer = .PlayerWhite
         } else if contentView.currentPlayer == .PlayerWhite {
@@ -129,6 +129,45 @@ extension HomeGameController {
             
             contentView.buttonsHoles[oppositeIndex].alpha = 1
             contentView.buttonsHoles[15].alpha = 1
+        }
+    }
+    
+    func isAnyRemainingSeeds(storeHouse: Int, smallestIndex: Int) {
+        var leftover = 0
+        var ngacang = 0
+        var numberOfOpponentSeeds = 0
+        var remainingSeeds = 0
+        
+        if holes[storeHouse] > 49 {
+            leftover = holes[storeHouse] - 49
+            for i in smallestIndex..<storeHouse {
+                holes[i] = 7
+                holes[storeHouse] = leftover
+                print(holes)
+            }
+            numberOfOpponentSeeds = 49 - leftover
+            ngacang = 7 - numberOfOpponentSeeds/7
+            
+            if ngacang <= 3 {
+                if numberOfOpponentSeeds % 7 != 0 {
+                    remainingSeeds = leftover % 7
+                    // fill loser congklak hole
+                } else {
+                    ngacang += 1
+                    if ngacang > 3 {
+                        // game over :(
+                        // fill loser congklak hole
+                    } else {
+                        remainingSeeds = 7
+                        // fill loser congklak hole
+                    }
+                }
+            } else {
+                // game over :(
+                // fill loser congklak hole
+            }
+        } else if holes[storeHouse] == 49 {
+            fillHoles()
         }
     }
 
