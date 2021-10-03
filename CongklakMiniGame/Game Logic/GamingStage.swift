@@ -224,4 +224,11 @@ extension HomeGameController {
             
         }
     }
+    
+    func gameOver() {
+        isGameOver = true
+        seedsInHand = 0
+        self.gamePlayed.onNext(false)
+        contentView.labelPlayerTurn.text = "Game Over, \(contentView.currentPlayer.rawValue) Win The Game"
+    }
 }
