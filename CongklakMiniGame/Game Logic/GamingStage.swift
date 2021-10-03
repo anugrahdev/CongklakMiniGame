@@ -170,5 +170,11 @@ extension HomeGameController {
             fillHoles()
         }
     }
-
+    
+    func updateUINgacang(index: Int) {
+        contentView.buttonsHoles[index].backgroundColor = .lightGray
+        contentView.buttonsHoles[index].setTitleColor(.black, for: .normal)
+        isNgacang = true
+        ngacangPlayer = contentView.currentPlayer
+    }
 }
