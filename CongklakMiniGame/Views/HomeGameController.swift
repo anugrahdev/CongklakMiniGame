@@ -150,35 +150,36 @@ class HomeGameController: BaseViewController<HomeGameView> {
     
     func startPlaying(pickedHole: Int) {
         var i = pickedHole
-
+        
         isEmptyHole(index: i)
         seedsInHand = holes[i]
         holes[i] = 0
         contentView.buttonsHoles[i].setTitle("\(holes[i])", for: .normal)
         i += 1
-
+        
         timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { [self] timer in
             if seedsInHand > 0 {
                 totalSteps += 1
-
+                
                 contentView.labelPlayerTurn.text = "Seeds in hands: \(seedsInHand-1)"
-
+                
+                i = skipNgacang(index: i)
 
                 if i > holes.count-1 {
                     i = 0
                 }
-
+                
                 i = skipOpponentStoreHouse(index: i)
-
+                
                 holeUIUpdate(index: i)
-
+                
                 if seedsInHand == 1 {
                     isLastSeed(index: i)
                 } else {
                     holes[i] += 1
                     seedsInHand -= 1
                 }
-
+                
                 updateNumberOfSeeds(index: i)
                 previousIndex = i
                 i += 1

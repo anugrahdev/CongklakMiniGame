@@ -44,5 +44,22 @@ extension HomeGameController {
         }
         
     }
+    
+    func skipNgacang(index: Int) -> Int {
+        var index: Int = index
+        if contentView.currentPlayer == ngacangPlayer {
+            if isNgacang {
+                for i in ngacangs {
+                    if contentView.currentPlayer == .PlayerWhite && index == 16 {
+                        index =  0
+                    }
+                    if index == i {
+                        index += 1
+                    }
+                }
+            }
+        }
+        return index
+    }
 
 }
