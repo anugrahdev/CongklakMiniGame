@@ -27,8 +27,8 @@ extension HomeGameController {
     func isLastSeed(index: Int) {
 
         if (index == 7 && contentView.currentPlayer == .PlayerBlack) || (index == 15 && contentView.currentPlayer == .PlayerWhite){
-            holes[index] += 1
-            seedsInHand -= 1
+            seedsInHand = seedsInHand - 1
+            holes[index] = holes[index] + 1
             totalSteps = 0
             contentView.labelPlayerTurn.text = "Seeds in hands : \(seedsInHand)"
             if !isGameOver {
@@ -40,6 +40,34 @@ extension HomeGameController {
             }
             timer?.invalidate()
             
+        } else if index != 7 && index != 15 {
+            if holes[index] != 0 {
+                if isNgacang {
+                    if !ngacangs.contains(index) {
+                        seedsInHand = holes[index]+1
+                        holes[index] = 0
+                    } else {
+                        seedsInHand = seedsInHand - 1
+                        holes[index] = holes[index] + 1
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3){
+                            self.switchTurn()
+                            self.unlockButton()
+                        }
+                    }
+                } else {
+                    seedsInHand = holes[index]+1
+                    holes[index] = 0
+                }
+            } else {
+                seedsInHand = seedsInHand - 1
+                holes[index] = holes[index] + 1
+                shot(index: index)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3){
+                    self.switchTurn()
+                    self.unlockButton()
+                }
+                timer?.invalidate()
+            }
         }
         
     }
