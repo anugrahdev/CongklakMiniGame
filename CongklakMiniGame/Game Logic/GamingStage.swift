@@ -152,19 +152,23 @@ extension HomeGameController {
                 if numberOfOpponentSeeds % 7 != 0 {
                     remainingSeeds = leftover % 7
                     // fill loser congklak hole
+                    fillLoserHoleWithSeeds(leftover: leftover, ngacang: ngacang, numberOfOpponent: numberOfOpponentSeeds, remainingShells: remainingSeeds)
                 } else {
                     ngacang += 1
                     if ngacang > 3 {
                         // game over :(
                         // fill loser congklak hole
+                        fillLoserHoleWithSeeds(leftover: leftover, ngacang: ngacang, numberOfOpponent: numberOfOpponentSeeds, remainingShells: remainingSeeds)
                     } else {
                         remainingSeeds = 7
                         // fill loser congklak hole
+                        fillLoserHoleWithSeeds(leftover: leftover, ngacang: ngacang, numberOfOpponent: numberOfOpponentSeeds, remainingShells: remainingSeeds)
                     }
                 }
             } else {
                 // game over :(
                 // fill loser congklak hole
+                fillLoserHoleWithSeeds(leftover: leftover, ngacang: ngacang, numberOfOpponent: numberOfOpponentSeeds, remainingShells: remainingSeeds)
             }
         } else if holes[storeHouse] == 49 {
             fillHoles()
@@ -176,5 +180,48 @@ extension HomeGameController {
         contentView.buttonsHoles[index].setTitleColor(.black, for: .normal)
         isNgacang = true
         ngacangPlayer = contentView.currentPlayer
+    }
+    
+    func fillLoserHoleWithSeeds(leftover: Int, ngacang: Int, numberOfOpponent: Int, remainingShells: Int) {
+        var largestIndex = Int()
+        var smallestIndex = Int()
+        var lastIndex = Int()
+        var storeHouse = Int()
+        
+        if contentView.currentPlayer == .PlayerBlack {
+            largestIndex = 14
+            smallestIndex = 8
+            lastIndex = 7 + ngacang
+            storeHouse = 15
+        } else if contentView.currentPlayer == .PlayerWhite {
+            largestIndex = 6
+            smallestIndex = 0
+            lastIndex = ngacang - 1
+            storeHouse = 7
+        }
+        
+        holes[storeHouse] = 0
+        
+        for i in stride(from: largestIndex, through: lastIndex, by: -1) {
+            holes[i] = 7
+        }
+        
+        for i in stride(from: lastIndex, through: smallestIndex, by: -1) {
+            let a = remainingShells/ngacang
+            if a * ngacang == remainingShells {
+                holes[i] = a
+            }
+            else {
+                if i == smallestIndex {
+                    holes[i] = remainingShells - a
+                }
+                else {
+                    holes[i] = a
+                }
+            }
+            ngacangs.insert(i, at: 0)
+            updateUINgacang(index: i)
+            
+        }
     }
 }
