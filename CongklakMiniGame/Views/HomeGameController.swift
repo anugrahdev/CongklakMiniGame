@@ -168,6 +168,7 @@ class HomeGameController: BaseViewController<HomeGameView> {
                     i = 0
                 }
 
+                i = skipOpponentStoreHouse(index: i)
 
                 holeUIUpdate(index: i)
 

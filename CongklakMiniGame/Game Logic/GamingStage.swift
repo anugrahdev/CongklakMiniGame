@@ -9,6 +9,21 @@ import UIKit
 
 extension HomeGameController {
     
+    func skipOpponentStoreHouse(index: Int) -> Int {
+        var i: Int = index
+        
+        if i == 15 && contentView.currentPlayer != .PlayerWhite {
+            i = 0
+            return i
+        } else if i == 7 && contentView.currentPlayer != .PlayerBlack {
+            i += 1
+            return i
+        }
+        else {
+            return index
+        }
+    }
+    
     
     func isLastSeed(index: Int) {
 
