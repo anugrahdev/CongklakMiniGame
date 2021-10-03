@@ -171,8 +171,12 @@ class HomeGameController: BaseViewController<HomeGameView> {
 
                 holeUIUpdate(index: i)
 
-                holes[i] += 1
-                seedsInHand -= 1
+                if seedsInHand == 1 {
+                    isLastSeed(index: i)
+                } else {
+                    holes[i] += 1
+                    seedsInHand -= 1
+                }
 
                 updateNumberOfSeeds(index: i)
                 previousIndex = i
