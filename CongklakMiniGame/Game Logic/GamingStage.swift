@@ -134,7 +134,7 @@ extension HomeGameController {
         }
     }
     
-    func isAnyRemainingSeeds(storeHouse: Int, smallestIndex: Int) {
+    func countRemainingSeeds(storeHouse: Int, smallestIndex: Int) {
         var leftover = 0
         var ngacang = 0
         var numberOfOpponentSeeds = 0
@@ -145,7 +145,6 @@ extension HomeGameController {
             for i in smallestIndex..<storeHouse {
                 holes[i] = 7
                 holes[storeHouse] = leftover
-                print(holes)
             }
             numberOfOpponentSeeds = 49 - leftover
             ngacang = 7 - numberOfOpponentSeeds/7
@@ -153,27 +152,25 @@ extension HomeGameController {
             if ngacang <= 3 {
                 if numberOfOpponentSeeds % 7 != 0 {
                     remainingSeeds = leftover % 7
-                    // fill loser congklak hole
                     fillLoserHoleWithSeeds(leftover: leftover, ngacang: ngacang, numberOfOpponent: numberOfOpponentSeeds, remainingShells: remainingSeeds)
                 } else {
                     ngacang += 1
                     if ngacang > 3 {
-                        // game over :(
-                        // fill loser congklak hole
+                        gameOver()
                         fillLoserHoleWithSeeds(leftover: leftover, ngacang: ngacang, numberOfOpponent: numberOfOpponentSeeds, remainingShells: remainingSeeds)
                     } else {
                         remainingSeeds = 7
-                        // fill loser congklak hole
                         fillLoserHoleWithSeeds(leftover: leftover, ngacang: ngacang, numberOfOpponent: numberOfOpponentSeeds, remainingShells: remainingSeeds)
                     }
                 }
             } else {
-                // game over :(
-                // fill loser congklak hole
+                gameOver()
                 fillLoserHoleWithSeeds(leftover: leftover, ngacang: ngacang, numberOfOpponent: numberOfOpponentSeeds, remainingShells: remainingSeeds)
             }
         } else if holes[storeHouse] == 49 {
             fillHoles()
+        } else {
+            
         }
     }
     
@@ -228,9 +225,9 @@ extension HomeGameController {
     }
     
     func gameOver() {
+        print("KEPANGGIL")
         isGameOver = true
         seedsInHand = 0
-        self.gamePlayed.onNext(false)
         contentView.labelPlayerTurn.text = "Game Over, \(contentView.currentPlayer.rawValue) Win The Game"
     }
 }

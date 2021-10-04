@@ -236,9 +236,7 @@ class HomeGameView: BaseView {
         
     }
     
-    override func onViewDidLoad() {
-//        generateHoles()
-        
+    override func onViewDidLoad() {        
         bindAndObserveView()
     }
     
