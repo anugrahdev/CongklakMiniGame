@@ -157,7 +157,7 @@ class HomeGameController: BaseViewController<HomeGameView> {
         contentView.buttonsHoles[i].setTitle("\(holes[i])", for: .normal)
         i += 1
         
-        timer = Timer.scheduledTimer(withTimeInterval: 0, repeats: true, block: { [self] timer in
+        timer = Timer.scheduledTimer(withTimeInterval: 0.28, repeats: true, block: { [self] timer in
             if seedsInHand > 0 {
                 totalSteps += 1
                 
