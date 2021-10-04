@@ -225,7 +225,6 @@ extension HomeGameController {
     }
     
     func gameOver() {
-        print("KEPANGGIL")
         isGameOver = true
         seedsInHand = 0
         contentView.labelPlayerTurn.text = "Game Over, \(contentView.currentPlayer.rawValue) Win The Game"
