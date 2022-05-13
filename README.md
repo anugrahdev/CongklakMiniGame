@@ -3,11 +3,11 @@
 iOS - Congklak mini game apps, traditional indonesian game
 
 <p align="center">
-<img src="https://i.ibb.co/w7mhmwV/Simulator-Screen-Shot-i-Phone-13-mini-2022-05-13-at-15-27-15.png" height="420px" width="730px"/> 
+<img src="https://i.ibb.co/XbQTp6c/Screen-Shot-2022-05-13-at-15-34-55.png" height="420px" width="730px"/> 
  </p>
  
  <p align="center">
-<img src="https://i.ibb.co/SndnZtf/Simulator-Screen-Shot-i-Phone-13-mini-2022-05-13-at-15-20-50.png" height="420px" width="730px"/> 
+<img src="https://i.ibb.co/BGc0Xpy/Screen-Shot-2022-05-13-at-15-35-11.png" height="420px" width="730px"/> 
  </p>
  
 **Tech Stack :**
