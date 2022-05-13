@@ -5,8 +5,9 @@ iOS - Congklak mini game apps, traditional indonesian game
 **Tech Stack :**
 
  1. Swift
- 2. [RxSwift](https://github.com/ReactiveX/RxSwift)
- 3. [RxSwift](https://github.com/SnapKit/SnapKit)
+ 2. UIKit
+ 3. [RxSwift](https://github.com/ReactiveX/RxSwift)
+ 4. [RxSwift](https://github.com/SnapKit/SnapKit)
 
 **Game Rules :**
 1. [Congklak Instruction](http://www.expat.or.id/info/congklakinstructions.html)
