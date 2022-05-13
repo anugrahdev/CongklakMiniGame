@@ -2,14 +2,6 @@
 
 iOS - Congklak mini game apps, traditional indonesian game
 
-<p align="center">
-<img src="https://i.ibb.co/XbQTp6c/Screen-Shot-2022-05-13-at-15-34-55.png" height="420px" width="730px"/> 
- </p>
- 
- <p align="center">
-<img src="https://i.ibb.co/BGc0Xpy/Screen-Shot-2022-05-13-at-15-35-11.png" height="420px" width="730px"/> 
- </p>
- 
 **Tech Stack :**
 
  1. Swift
@@ -18,6 +10,14 @@ iOS - Congklak mini game apps, traditional indonesian game
 
 **Game Rules :**
 1. [Congklak Instruction](http://www.expat.or.id/info/congklakinstructions.html)
+
+<p align="center">
+<img src="https://i.ibb.co/XbQTp6c/Screen-Shot-2022-05-13-at-15-34-55.png" height="420px" width="730px"/> 
+ </p>
+ 
+ <p align="center">
+<img src="https://i.ibb.co/BGc0Xpy/Screen-Shot-2022-05-13-at-15-35-11.png" height="420px" width="730px"/> 
+ </p>
  
  ### LICENCE
  ```groovy
