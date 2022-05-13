@@ -12,11 +12,11 @@ iOS - Congklak mini game apps, traditional indonesian game
 1. [Congklak Instruction](http://www.expat.or.id/info/congklakinstructions.html)
 
 <p align="center">
-<img src="https://i.ibb.co/Mfwsv4t/Screen-Shot-2022-05-13-at-17-02-05.png" height="420px" width="730px"/> 
+<img src="https://i.ibb.co/Mfwsv4t/Screen-Shot-2022-05-13-at-17-02-05.png" height="450px" width="730px"/> 
  </p>
  
  <p align="center">
-<img src="https://i.ibb.co/Y7W1PFj/Screen-Shot-2022-05-13-at-17-02-30.png" height="420px" width="730px"/> 
+<img src="https://i.ibb.co/Y7W1PFj/Screen-Shot-2022-05-13-at-17-02-30.png" height="450px" width="730px"/> 
  </p>
  
  ### LICENCE
